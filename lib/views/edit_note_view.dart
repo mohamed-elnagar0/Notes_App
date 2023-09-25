@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/edit_Note_view_body.dart';
+import 'widgets/edit_note_view_body.dart';
 
 class EditNoteView extends StatelessWidget {
   const EditNoteView({super.key});
