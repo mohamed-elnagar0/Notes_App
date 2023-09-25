@@ -22,10 +22,10 @@ class AddNoteButtonSheat extends StatelessWidget {
             ),
             CustomTextField(
               hintText: 'content',
-              maxLines: 8,
+              maxLines: 10,
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             CustomButton(),
             SizedBox(
