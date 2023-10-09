@@ -5,6 +5,7 @@ import 'package:notes_app/constant.dart';
 import 'package:notes_app/models/note_model.dart';
 import 'package:notes_app/simble_bloc_observer.dart';
 import 'package:notes_app/views/notes_view.dart';
+import 'cubits/notes_cubit/notescubit_cubit.dart';
 
 void main() async {
   Bloc.observer = SimbleBlocObserver();
@@ -18,11 +19,14 @@ class NotesApp extends StatelessWidget {
   const NotesApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(fontFamily: 'Poppins'),
-      darkTheme: ThemeData.dark(),
-      home: const NotesView(),
-      debugShowCheckedModeBanner: false,
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        theme: ThemeData(fontFamily: 'Poppins'),
+        darkTheme: ThemeData.dark(),
+        home: const NotesView(),
+        debugShowCheckedModeBanner: false,
+      ),
     );
   }
 }
