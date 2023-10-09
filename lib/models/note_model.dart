@@ -1,15 +1,13 @@
-import 'package:hive/hive.dart';   //enable us to creat type adabter to store opject(mab)
-
-
+import 'package:hive/hive.dart'; //enable us to creat type adabter to store opject(mab)
 
 part 'note_model.g.dart';
 
 @HiveType(typeId: 0)
-class NoteModel extends HiveObject{
+class NoteModel extends HiveObject {
   @HiveField(0)
-  final String title;
+  String title;
   @HiveField(1)
-  final String subTitle;
+  String subTitle;
   @HiveField(2)
   final String data;
   @HiveField(3)

@@ -16,7 +16,9 @@ class AddNoteButtonSheat extends StatelessWidget {
             BlocProvider.of<NotesCubit>(context).featchAllNotes();
             Navigator.pop(context);
           } else if (state is AddNoteFailure) {
-            print('failed : errM = ${state.errMessage}');
+            Center(
+              child: Text('failed : errM = ${state.errMessage}'),
+            );
           }
         },
         builder: (context, state) {
