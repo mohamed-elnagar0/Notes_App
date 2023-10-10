@@ -19,16 +19,16 @@ class SimbleBlocObserver implements BlocObserver {
 
   @override
   void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
-    // TODO: implement onError
+    return;
   }
 
   @override
   void onEvent(Bloc bloc, Object? event) {
-    // TODO: implement onEvent
+    return;
   }
 
   @override
   void onTransition(Bloc bloc, Transition transition) {
-    // TODO: implement onTransition
+    return;
   }
 }
